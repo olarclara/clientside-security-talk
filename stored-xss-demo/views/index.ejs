@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Stored XSS Demo</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        text-align: center;
+      }
+      
+      section {
+        margin: 0 auto;
+        text-align: left;
+        width: 60vw;
+      }
+    </style>
+  </head>
+  <body>
+  <section>
+    <article>
+      <h1>Lorem Ipsum</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut tempor tortor, 
+      ut vulputate nunc. In dignissim interdum ipsum, non cursus mauris convallis vel. 
+      Morbi sodales dignissim sapien, non ultricies magna efficitur non. Etiam nec efficitur 
+      magna, at fermentum velit. Nullam ornare tincidunt sem. Maecenas nisi ipsum, 
+      aliquet nec cursus quis, aliquet in orci. Praesent leo ligula, rhoncus in massa ut, 
+      bibendum hendrerit mauris. Etiam vulputate varius dui, ut molestie dui feugiat vel. 
+      Sed id luctus dolor, non tempus purus. Sed ultrices lacinia tortor a condimentum. 
+      Cras tortor diam, rutrum at eros luctus, interdum eleifend eros.</p>
+      <p>Nullam lobortis porta nunc eget accumsan. Aliquam eros leo, pellentesque euismod 
+      volutpat non, malesuada id dui. Sed luctus ante nec neque pulvinar consectetur. 
+      Phasellus vitae rhoncus lacus. Duis quis orci id nibh finibus maximus. Phasellus viverra, 
+      massa tristique dictum laoreet, lorem est malesuada magna, quis dignissim dui leo vitae 
+      nunc. Vivamus sit amet orci congue arcu sollicitudin ultrices. Integer tristique quam 
+      euismod dolor facilisis, sed ornare purus condimentum. Duis nec elit nec enim eleifend 
+      imperdiet. Aliquam vel lacinia diam, dignissim finibus nisi. Vestibulum porttitor est eu
+      faucibus mollis. Vivamus pharetra odio nibh, sit amet pulvinar nisl aliquam eget.</p>
+    </article>
+    <div>
+      <h3>Liked? Leave a comment!</h3>
+      <form method="post" action="/new-comment">
+		    <input type="text" name="content" id="inputComment">
+        <br />
+        <button type="submit">Comment</button>
+      </form>
+      <ul>
+      <% comments.forEach((comment) => { %>
+        <li> <%= comment.content %> </li>
+      <% }) %>
+      </ul>
+    </div>
+    </section>
+  </body>
+</html>

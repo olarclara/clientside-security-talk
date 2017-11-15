@@ -1,0 +1,12 @@
+{
+  "name": "stored-xss-demo",
+  "version": "0.0.1",
+  "author": "Maria C. <claarasantana@gmail.com>",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "ejs": "^2.5.7"
+  }
+}

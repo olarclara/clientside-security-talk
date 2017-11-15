@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Women Dev Summit Demo</title>
+</head>
+
+<body>
+  <div>
+    <nav>
+      <button id="btn-home-view">Home</button>
+      <button id="btn-profile-view">Perfil</button>
+      <button id="btn-login">Entrar</button>
+      <button id="btn-logout">Sair=</button>
+    </nav>
+
+    <main class="container">
+      <!-- home view -->
+      <div id="home-view">
+        <h4></h4>
+      </div>
+
+      <!-- profile view -->
+      <div id="profile-view" class="panel panel-default profile-area">
+        <div class="panel-heading">
+          <h3>Profile</h3>
+        </div>
+        <div class="panel-body">
+          <img class="avatar" alt="avatar">
+          <div>
+            <h3 class="nickname"></h3>
+          </div>
+          <pre class="full-profile"></pre>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="node_modules/auth0-js/build/auth0.js"></script>
+  <script src="auth0-variables.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
